@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-21T16:12:21 IST" name="GroupSuite" finished-at="2026-05-21T16:14:25 IST" duration-ms="123880">
+    <groups>
+      <group name="regression">
+        <method signature="Amazon.addToCart()[pri:5, instance:practice.testNg.Amazon@31190526]" name="addToCart" class="practice.testNg.Amazon"/>
+        <method signature="Amazon.deleteCartItem()[pri:6, instance:practice.testNg.Amazon@31190526]" name="deleteCartItem" class="practice.testNg.Amazon"/>
+        <method signature="Amazon.checkYourOrdersPage()[pri:8, instance:practice.testNg.Amazon@31190526]" name="checkYourOrdersPage" class="practice.testNg.Amazon"/>
+        <method signature="Amazon.applyOrdersFilter()[pri:9, instance:practice.testNg.Amazon@31190526]" name="applyOrdersFilter" class="practice.testNg.Amazon"/>
+        <method signature="Amazon.registration()[pri:1, instance:practice.testNg.Amazon@31190526]" name="registration" class="practice.testNg.Amazon"/>
+        <method signature="Amazon.login()[pri:2, instance:practice.testNg.Amazon@31190526]" name="login" class="practice.testNg.Amazon"/>
+        <method signature="Amazon.validateSearch(java.lang.String)[pri:3, instance:practice.testNg.Amazon@31190526]" name="validateSearch" class="practice.testNg.Amazon"/>
+        <method signature="Amazon.productDetail()[pri:4, instance:practice.testNg.Amazon@31190526]" name="productDetail" class="practice.testNg.Amazon"/>
+        <method signature="Amazon.changeAddress()[pri:7, instance:practice.testNg.Amazon@31190526]" name="changeAddress" class="practice.testNg.Amazon"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="Amazon.login()[pri:2, instance:practice.testNg.Amazon@31190526]" name="login" class="practice.testNg.Amazon"/>
+        <method signature="Amazon.validateSearch(java.lang.String)[pri:3, instance:practice.testNg.Amazon@31190526]" name="validateSearch" class="practice.testNg.Amazon"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2026-05-21T16:12:21 IST" name="SmokeTests" finished-at="2026-05-21T16:14:25 IST" duration-ms="123880">
+      <class name="practice.testNg.Amazon">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:12:21 IST" name="beforeTest" finished-at="2026-05-21T16:12:25 IST" duration-ms="3938" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="registration()[pri:1, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:12:25 IST" name="registration" finished-at="2026-05-21T16:12:46 IST" duration-ms="20490" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registration -->
+        <test-method signature="login()[pri:2, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:12:46 IST" name="login" finished-at="2026-05-21T16:13:01 IST" duration-ms="15552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="validateSearch(java.lang.String)[pri:3, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:13:01 IST" name="validateSearch" data-provider="AmazonSearchData" finished-at="2026-05-21T16:13:08 IST" duration-ms="6918" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Oneplus]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSearch -->
+        <test-method signature="validateSearch(java.lang.String)[pri:3, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:13:08 IST" name="validateSearch" data-provider="AmazonSearchData" finished-at="2026-05-21T16:13:15 IST" duration-ms="6638" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4 star mobiles]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSearch -->
+        <test-method signature="validateSearch(java.lang.String)[pri:3, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:13:15 IST" name="validateSearch" data-provider="AmazonSearchData" finished-at="2026-05-21T16:13:23 IST" duration-ms="8499" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shoes under 1000]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSearch -->
+        <test-method signature="validateSearch(java.lang.String)[pri:3, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:13:23 IST" name="validateSearch" data-provider="AmazonSearchData" finished-at="2026-05-21T16:13:30 IST" duration-ms="6530" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[578589534534]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSearch -->
+        <test-method signature="validateSearch(java.lang.String)[pri:3, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:13:30 IST" name="validateSearch" data-provider="AmazonSearchData" finished-at="2026-05-21T16:13:38 IST" duration-ms="7643" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[!@#$%^&*()_+]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSearch -->
+        <test-method signature="validateSearch(java.lang.String)[pri:3, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:13:38 IST" name="validateSearch" data-provider="AmazonSearchData" finished-at="2026-05-21T16:13:46 IST" duration-ms="8582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FaceWash]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSearch -->
+        <test-method signature="productDetail()[pri:4, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:13:46 IST" name="productDetail" finished-at="2026-05-21T16:13:53 IST" duration-ms="6890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productDetail -->
+        <test-method signature="addToCart()[pri:5, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:13:53 IST" name="addToCart" finished-at="2026-05-21T16:14:02 IST" duration-ms="8704" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method signature="deleteCartItem()[pri:6, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:14:02 IST" name="deleteCartItem" finished-at="2026-05-21T16:14:06 IST" depends-on-methods="practice.testNg.Amazon.addToCart" duration-ms="4251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCartItem -->
+        <test-method signature="changeAddress()[pri:7, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:14:06 IST" name="changeAddress" finished-at="2026-05-21T16:14:19 IST" duration-ms="12459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeAddress -->
+        <test-method signature="checkYourOrdersPage()[pri:8, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:14:19 IST" name="checkYourOrdersPage" finished-at="2026-05-21T16:14:23 IST" duration-ms="4103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkYourOrdersPage -->
+        <test-method signature="applyOrdersFilter()[pri:9, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:14:23 IST" name="applyOrdersFilter" finished-at="2026-05-21T16:14:23 IST" depends-on-methods="practice.testNg.Amazon.checkYourOrdersPage" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyOrdersFilter -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:practice.testNg.Amazon@31190526]" started-at="2026-05-21T16:14:23 IST" name="afterTest" finished-at="2026-05-21T16:14:25 IST" duration-ms="2412" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- practice.testNg.Amazon -->
+    </test> <!-- SmokeTests -->
+  </suite> <!-- GroupSuite -->
+</testng-results>
