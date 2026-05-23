@@ -43,13 +43,9 @@ public class DemoWebShopTest {
     @DataProvider(name = "UserRegistrationData")
     public Object[][] provideRegistrationDetails() {
         return new Object[][] {
-            // Valid User
             {"Sam", "Choudhary", "samhey654@gmail.com", "sam@123", "sam@123"},
-            // Invalid Email format
             {"harry", "Wilson", "harry.com", "harry@123", "harry@123"},
-            // Password Mismatch
             {"Rahul", "Sharma", "rahul@gmail.com", "Rahul@123", "Rahul123"},
-            // Empty Submission
             {"", "", "", "", ""}
         };
     }
@@ -61,10 +57,7 @@ public class DemoWebShopTest {
         
         WebElement searchInput = driver.findElement(By.id("small-searchterms"));
         
-        searchInput.click();
-        searchInput.sendKeys(Keys.CONTROL + "a");
-        searchInput.sendKeys(Keys.DELETE);
-        
+        searchInput.click();        
         searchInput.sendKeys(searchKeyword);
         searchInput.sendKeys(Keys.ENTER);
         

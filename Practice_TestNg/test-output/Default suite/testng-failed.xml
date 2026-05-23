@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice.testNg.Amazon">
+      <class name="practice.testNg.WriteExcelDDT">
         <methods>
-          <include name="afterTest"/>
-          <include name="registration" invocation-numbers="0 1 2"/>
-          <include name="beforeTest"/>
+          <include name="setupExcel"/>
+          <include name="saveAndCloseExcel"/>
+          <include name="writeDataToExcel"/>
         </methods>
-      </class> <!-- practice.testNg.Amazon -->
+      </class> <!-- practice.testNg.WriteExcelDDT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

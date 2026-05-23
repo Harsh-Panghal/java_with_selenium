@@ -1,6 +1,10 @@
 package practice.testNg;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,16 +27,29 @@ public class LoginDDT {
     }
 
     @DataProvider(name = "LoginCredentials")
-    public Object[][] getLoginData() {
-        return new Object[][] { 
-            {"invalid", "password"},    
-            {"username", ""},
-            {"username", "12345678"},
-            {"username", "12345678"},
-            {"", "null"},
-            {"null", ""},
-            {"username", "password"}
-        };
+    public Object[][] getLoginData() throws Exception {
+    	FileInputStream file =new FileInputStream("D:\\java_with_selenium\\Practice_TestNg\\TestData\\LoginData.xlsx");
+
+    	 XSSFWorkbook workbook =new XSSFWorkbook(file);
+
+    	 XSSFSheet sheet =workbook.getSheet("Sheet1");
+
+    	int rows = sheet.getPhysicalNumberOfRows();// total row
+    	int cols = sheet.getRow(0).getLastCellNum();// 0....4
+
+    	 Object[][] data = new Object[rows - 1][cols];
+
+    	for (int i = 1; i < rows; i++) {
+
+    	for (int j = 0; j < cols; j++) {
+
+    	 data[i - 1][j] = sheet.getRow(i).getCell(j).toString();
+    	 }
+    	 }
+
+    	 workbook.close();
+
+    	return data;
     }
     
     @Test(dataProvider = "LoginCredentials")
@@ -40,15 +57,8 @@ public class LoginDDT {
         driver.get("http://zero.webappsecurity.com/login.html");
         System.out.println("\nTrying Login With -> Email: " + email + " | Password: " + password);
         
-        WebElement userField = driver.findElement(By.id("user_login"));
-        userField.clear(); 
-        userField.sendKeys(email);
-        
-        WebElement passField = driver.findElement(By.id("user_password"));
-        passField.clear();
-        passField.sendKeys(password);
-        
-        driver.findElement(By.name("submit")).click();
+        LoginPageZeroBankPOM loginPage = new LoginPageZeroBankPOM(driver);
+        loginPage.login(email, password);
         
     }
     

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="GroupSuite">
-  <test thread-count="2" name="SmokeTests">
-  <groups>
-  <run>
-  <include name="smoke"></include>
-  </run>
-  </groups>
+<suite name="Listener Demo">
+
+  <listeners>
+    <listener class-name="listner.MyListener" /> 
+  </listeners>
+
+  <test name="Google And WebShop Test">
     <classes>
-      <class name="practice.testNg.Amazon"/>
+      <class name="tests.AmazonPOMTest"/> 
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test>
+
+</suite>
