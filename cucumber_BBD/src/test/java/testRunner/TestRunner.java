@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @Listeners(utilities.MyListener.class) 
 @CucumberOptions(
-    features = "src/test/resources/Features/NinjaMaster.feature", 
+    features = "src/test/resources/Features", 
     glue = "stepDefinitions", 
-    tags = "@Smoke",
+    tags = "@Regression",
     plugin = {
         "pretty", 
         "html:target/cucumber-reports/NinjaHTMLReport.html"

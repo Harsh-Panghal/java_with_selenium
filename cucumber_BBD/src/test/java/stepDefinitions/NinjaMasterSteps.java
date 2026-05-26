@@ -25,9 +25,7 @@ public class NinjaMasterSteps extends BaseClass {
 
     @Given("user navigates to Tutorials Ninja registration page")
     public void user_navigates_to_tutorials_ninja_registration_page() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        
         driver.get("http://tutorialsninja.com/demo/index.php?route=account/register");
     }
 
@@ -72,9 +70,6 @@ public class NinjaMasterSteps extends BaseClass {
 
     @Given("user navigates to Tutorials Ninja login page")
     public void user_navigates_to_tutorials_ninja_login_page() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("http://tutorialsninja.com/demo/index.php?route=account/login");
     }
 
@@ -244,11 +239,4 @@ public class NinjaMasterSteps extends BaseClass {
         }
     }
 
-    @And("close the browser")
-    public void close_the_browser() {
-        if (driver != null) {
-            driver.quit();
-            System.out.println("Browser closed successfully.");
-        }
-    }
 }
