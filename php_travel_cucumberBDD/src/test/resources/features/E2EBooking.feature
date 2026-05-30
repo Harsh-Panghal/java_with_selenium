@@ -2,12 +2,12 @@ Feature: Complete End-to-End Hotel Booking Workflow
 
   @E2E @Regression
   Scenario: Validate Complete Booking Workflow
-    # 1. Login (Reusing Q1 Steps)
+    # 1. Login
     Given user launches browser
     When user enters "user@phptravels.com" and "demouser"
     And clicks on login button
     
-    # 2. Search Hotel (Reusing Q3 Steps)
+    # 2. Search Hotel
     And user is on the PHPTravels home page
     And user enters destination "Dubai"
     And selects check-in and check-out dates

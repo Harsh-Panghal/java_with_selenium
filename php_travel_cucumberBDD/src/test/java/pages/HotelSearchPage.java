@@ -14,11 +14,11 @@ public class HotelSearchPage {
     private By destinationInput = By.cssSelector("input[placeholder='Search By City']");
     // Dynamic list items matching city name
     private String dynamicCityResult = "//*[contains(text(),'%s')]";
-    
+    private By staysTab = By.xpath("//button[@role='tab' and .//span[text()='Stays']]");
     // Dates & Travellers
     private By checkInInput = By.name("checkin_date");
     private By checkOutInput = By.name("checkout_date");
-    private By travellersDropdown = By.xpath("//a[contains(@class, 'dropdown-toggle') and contains(@href, 'travellers')]");
+    private By travellersDropdown = By.xpath("//*[contains(text(), 'Traveler') or contains(@class, 'traveller')]");
     private By searchBtn = By.xpath("//button[@type='submit' and contains(., 'Search Hotels')]");
     
     private By nationalityDropdownClickable = By.xpath("//div[@x-data='nationalityDropdown()']//div[contains(@class, 'cursor-pointer')]");
@@ -42,22 +42,51 @@ public class HotelSearchPage {
         }
     }
 
-    public void searchCity(String cityName) {
+    public void clickStaysTab() {
         try {
-            WebElement destInput = WaitUtils.waitForVisible(driver, destinationInput, 10);
-            destInput.clear();
-            destInput.sendKeys(cityName);
+            WebElement tab = WaitUtils.waitForPresence(driver, staysTab, 10);
+
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();", tab);
             
-            System.out.println("Typed city: " + cityName);
+            System.out.println("Switched to 'Stays' tab successfully!");
             Thread.sleep(2000); 
             
-            By exactCity = By.xpath(String.format(dynamicCityResult, cityName));
-            WebElement cityOption = WaitUtils.waitForClickable(driver, exactCity, 10);
-            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cityOption);
-            System.out.println("City selected from auto-suggest: " + cityName);
+        } catch (Exception e) {
+            System.out.println("Could not switch to 'Stays' tab: " + e.getMessage());
+            org.testng.Assert.fail("Stays tab switch fail ho gaya: " + e.getMessage());
+        }
+    }
+    
+    public void searchCity(String cityName) {
+        try {
+            List<WebElement> destInputs = driver.findElements(destinationInput);
+            WebElement activeInput = null;
+            for(WebElement input : destInputs) {
+                if(input.isDisplayed()) {
+                    activeInput = input;
+                    break; 
+                }
+            }
+            
+            if(activeInput != null) {
+                activeInput.clear();
+                activeInput.sendKeys(cityName);
+                System.out.println("Typed city: " + cityName);
+                Thread.sleep(2500);
+
+                By exactCity = By.xpath(String.format(dynamicCityResult, cityName));
+                WebElement cityOption = WaitUtils.waitForClickable(driver, exactCity, 10);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cityOption);
+                System.out.println("City selected from auto-suggest: " + cityName);
+            } else {
+                System.out.println(" Koi bhi visible destination input nahi mila!");
+                org.testng.Assert.fail("Destination input visible nahi hai.");
+            }
             
         } catch (Exception e) {
             System.out.println("City search failed: " + e.getMessage());
+            org.testng.Assert.fail("City search error: " + e.getMessage());
         }
     }
 

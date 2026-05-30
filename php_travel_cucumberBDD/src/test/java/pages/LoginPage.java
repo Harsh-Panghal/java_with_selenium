@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.WaitUtils;
 
@@ -45,14 +46,14 @@ public class LoginPage {
     }
 
     public void clickLogin() {
-        org.openqa.selenium.WebElement btn = WaitUtils.waitForClickable(driver, loginButton, 10);
+        WebElement btn = WaitUtils.waitForClickable(driver, loginButton, 10);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", btn);
     }
 
     public boolean isDashboardDisplayed() {
         try {
-            org.openqa.selenium.support.ui.WebDriverWait wait = new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
             return wait.until(org.openqa.selenium.support.ui.ExpectedConditions.urlContains("dashboard"));
         } catch (Exception e) {
             System.out.println("Dashboard URL validation failed. Current URL: " + driver.getCurrentUrl());

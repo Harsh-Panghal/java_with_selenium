@@ -24,6 +24,7 @@ public class HotelSearchSteps {
         // 2. Navigate to Home Page (No extra endpoint needed)
         DriverFactory.getDriver().get(baseUrl);
         searchPage.closeDemoPopupIfPresent();
+        searchPage.clickStaysTab();
         System.out.println("Navigated to Home Page successfully.");
     }
 

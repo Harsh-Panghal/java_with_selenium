@@ -47,7 +47,6 @@ public class ApplicationHooks {
                 System.out.println("Step Failed! Capturing Screenshot...");
                 scenario.attach(sourcePath, "image/png", "FAILED: " + screenshotName);
             } else {
-                // Agar pass hua toh bhi screenshot attach karo (Grasshopper adapter automatically handle kar lega)
                 scenario.attach(sourcePath, "image/png", "PASSED/SKIPPED: " + screenshotName);
             }
         } catch (Exception e) {

@@ -23,7 +23,7 @@ public class BookingWorkflowPage {
     private By termsCheckbox = By.id("terms_accepted"); 
     private By confirmBookingBtn = By.xpath("//button[contains(., 'Confirm Booking')]");
     
-    private By confirmationMessage = By.xpath("//*[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'success') or contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'confirm')]");
+    private By confirmationMessage = By.id("successMessage");
     
     private By accountMenu = By.xpath("//a[contains(@class, 'dropdown-toggle') and contains(., 'Account')]");
     private By logoutBtn = By.xpath("//a[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'logout')]");
@@ -71,9 +71,9 @@ public class BookingWorkflowPage {
         System.out.println("Starting Room Selection Process...");
         try {
             ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 600);");
-            Thread.sleep(3000); // Rooms API se load hone ka wait
+            Thread.sleep(3000); 
 
-            System.out.println("⚡ Clicking 'Select' for the first room option...");
+            System.out.println("Clicking 'Select' for the first room option...");
             WebElement roomBtn = WaitUtils.waitForClickable(driver, selectRoomBtn, 15);
             
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", roomBtn);
@@ -82,7 +82,7 @@ public class BookingWorkflowPage {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", roomBtn);
             
             System.out.println("Room Selected! Waiting for Continue Booking button...");
-            Thread.sleep(2000); // Selection animation ka wait
+            Thread.sleep(2000); 
 
             System.out.println("Clicking 'Continue Booking' button...");
             WebElement continueBtn = WaitUtils.waitForClickable(driver, continueBookingBtn, 10);

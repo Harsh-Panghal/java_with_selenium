@@ -4,12 +4,22 @@ import org.testng.Assert;
 import base.DriverFactory;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pages.BookingWorkflowPage;
+import pages.LoginPage;
 
 public class E2EBookingSteps {
 
     private BookingWorkflowPage bookingPage = new BookingWorkflowPage(DriverFactory.getDriver());
+    private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 
+    @When("user enters {string} and {string}")
+    public void user_enters_and(String username, String password) {
+
+        loginPage.enterUsername(username);     
+        loginPage.enterPassword(password);  
+
+    }
     @And("user selects a hotel from the search results")
     public void user_selects_a_hotel_from_the_search_results() {
         bookingPage.selectFirstHotel();
