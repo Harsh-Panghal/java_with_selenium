@@ -1,0 +1,1510 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">May 29, 2026 10:26:12 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@Smoke</a><a class="dropdown-item" href="#">@WebTable</a><a class="dropdown-item" href="#">@ExcelData</a><a class="dropdown-item" href="#">@Regression</a><a class="dropdown-item" href="#">@E2E</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">PHPTravels Login Module</p>
+            <p class="text-sm">
+              <span>10:26:13</span> / <span>00:01:21:173</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">PHPTravels Login Module</h5>
+<span class='badge badge-success'>05.29.2026 10:26:13</span>
+<span class='badge badge-danger'>05.29.2026 10:27:35</span>
+<span class='badge badge-default'>00:01:21:173</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Validate Login Functionality using Excel</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Validate Login Functionality using Excel</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user launches browser</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030601658
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded1.png' src="../Screenshots/embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters login credentials from sheet "LoginData" and rownumber 0</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030622182
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded13.png' src="../Screenshots/embedded13.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030630230
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded21.png' src="../Screenshots/embedded21.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate login result</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030631133
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded22.png' src="../Screenshots/embedded22.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Validate Login Functionality using Excel</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user launches browser</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030607439
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded2.png' src="../Screenshots/embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters login credentials from sheet "LoginData" and rownumber 2</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030621638
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded11.png' src="../Screenshots/embedded11.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030622683
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded14.png' src="../Screenshots/embedded14.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate login result</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030649185
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded26.png' src="../Screenshots/embedded26.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Validate Login Functionality using Excel</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user launches browser</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030608029
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded3.png' src="../Screenshots/embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters login credentials from sheet "LoginData" and rownumber 1</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030619863
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded8.png' src="../Screenshots/embedded8.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030625679
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded16.png' src="../Screenshots/embedded16.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate login result</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030652404
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded30.png' src="../Screenshots/embedded30.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>Validate Login Functionality using Excel</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user launches browser</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030613798
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded4.png' src="../Screenshots/embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters login credentials from sheet "LoginData" and rownumber 3</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030622156
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded12.png' src="../Screenshots/embedded12.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030623313
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded15.png' src="../Screenshots/embedded15.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate login result</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Login_Functionality_using_Excel_1780030651239
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded28.png' src="../Screenshots/embedded28.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">PHPTravels Registration Module</p>
+            <p class="text-sm">
+              <span>10:26:13</span> / <span>00:01:32:335</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">PHPTravels Registration Module</h5>
+<span class='badge badge-success'>05.29.2026 10:26:13</span>
+<span class='badge badge-danger'>05.29.2026 10:27:46</span>
+<span class='badge badge-default'>00:01:32:335</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Validate User Registration with Random Email</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.RegistrationSteps.user_is_on_the_registration_page()">
+                <span>Given user is on the registration page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_User_Registration_with_Random_Email_1780030616624
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded5.png' src="../Screenshots/embedded5.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegistrationSteps.user_enters_personal_details(java.lang.String,java.lang.String)">
+                <span>When user enters personal details "Harsh" "Choudhary"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_User_Registration_with_Random_Email_1780030620006
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded9.png' src="../Screenshots/embedded9.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegistrationSteps.enters_a_randomly_generated_email_and_password(java.lang.String)">
+                <span>And enters a randomly generated email and password "Harsh@12345"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_User_Registration_with_Random_Email_1780030634768
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded24.png' src="../Screenshots/embedded24.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegistrationSteps.clicks_on_the_signup_button()">
+                <span>And clicks on the signup button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_User_Registration_with_Random_Email_1780030665437
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded34.png' src="../Screenshots/embedded34.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.RegistrationSteps.validate_successful_registration()">
+                <span>Then validate successful registration</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_User_Registration_with_Random_Email_1780030665686
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded35.png' src="../Screenshots/embedded35.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">PHPTravels Hotel Search Module</p>
+            <p class="text-sm">
+              <span>10:26:13</span> / <span>00:01:25:186</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">PHPTravels Hotel Search Module</h5>
+<span class='badge badge-success'>05.29.2026 10:26:13</span>
+<span class='badge badge-danger'>05.29.2026 10:27:39</span>
+<span class='badge badge-default'>00:01:25:186</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Validate Hotel Booking Search</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Validate Hotel Booking Search</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user is on the PHPTravels home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Hotel_Booking_Search_1780030617788
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded7.png' src="../Screenshots/embedded7.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters destination "Dubai"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Hotel_Booking_Search_1780030624628
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded17.png' src="../Screenshots/embedded17.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And selects check-in and check-out dates</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Hotel_Booking_Search_1780030631028
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded23.png' src="../Screenshots/embedded23.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And selects travellers count</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Hotel_Booking_Search_1780030647552
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded25.png' src="../Screenshots/embedded25.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And selects nationality "India"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Hotel_Booking_Search_1780030649101
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded27.png' src="../Screenshots/embedded27.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on the hotel search button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Hotel_Booking_Search_1780030653767
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded31.png' src="../Screenshots/embedded31.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate hotel search results are displayed</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Hotel_Booking_Search_1780030655863
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded32.png' src="../Screenshots/embedded32.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And fetch and validate dynamic hotel prices</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Hotel_Booking_Search_1780030658451
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded33.png' src="../Screenshots/embedded33.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Booking Table Validations</p>
+            <p class="text-sm">
+              <span>10:26:13</span> / <span>00:01:21:010</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Booking Table Validations</h5>
+<span class='badge badge-success'>05.29.2026 10:26:13</span>
+<span class='badge badge-danger'>05.29.2026 10:27:34</span>
+<span class='badge badge-default'>00:01:21:010</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="13"><span class="badge log pass-bg mr-2">Pass</span>Extract and Validate Booking Data</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_launches_browser()">
+                <span>Given user launches browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Extract_and_Validate_Booking_Data_1780030617530
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded6.png' src="../Screenshots/embedded6.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.WebTableSteps.user_enters_valid_login_credentials()">
+                <span>When user enters valid login credentials</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Extract_and_Validate_Booking_Data_1780030621326
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded10.png' src="../Screenshots/embedded10.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.clicks_on_login_button()">
+                <span>And clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Extract_and_Validate_Booking_Data_1780030628936
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded19.png' src="../Screenshots/embedded19.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.WebTableSteps.user_validates_booking_table_data_for_duplicates_and_prices()">
+                <span>Then user validates booking table data for duplicates and prices</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Extract_and_Validate_Booking_Data_1780030651858
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded29.png' src="../Screenshots/embedded29.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Complete End-to-End Hotel Booking Workflow</p>
+            <p class="text-sm">
+              <span>10:26:14</span> / <span>00:01:05:313</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Complete End-to-End Hotel Booking Workflow</h5>
+<span class='badge badge-success'>05.29.2026 10:26:14</span>
+<span class='badge badge-danger'>05.29.2026 10:27:19</span>
+<span class='badge badge-default'>00:01:05:313</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log fail-bg mr-2">Fail</span>Validate Complete Booking Workflow</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepdefinitions.LoginSteps.user_launches_browser()">
+                <span>Given user launches browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Complete_Booking_Workflow_1780030628053
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded18.png' src="../Screenshots/embedded18.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>When user enters "user@phptravels.com" and "demouser"</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>hooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>PASSED/SKIPPED: Validate_Complete_Booking_Workflow_1780030629275
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded20.png' src="../Screenshots/embedded20.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.LoginSteps.clicks_on_login_button()">
+                <span>And clicks on login button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.HotelSearchSteps.user_is_on_the_php_travels_home_page()">
+                <span>And user is on the PHPTravels home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.HotelSearchSteps.user_enters_destination(java.lang.String)">
+                <span>And user enters destination "Dubai"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.HotelSearchSteps.selects_check_in_and_check_out_dates()">
+                <span>And selects check-in and check-out dates</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.HotelSearchSteps.selects_travellers_count()">
+                <span>And selects travellers count</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.HotelSearchSteps.selects_nationality(java.lang.String)">
+                <span>And selects nationality "India"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.HotelSearchSteps.clicks_on_the_hotel_search_button()">
+                <span>And clicks on the hotel search button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.E2EBookingSteps.user_selects_a_hotel_from_the_search_results()">
+                <span>And user selects a hotel from the search results</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.E2EBookingSteps.books_the_hotel_room()">
+                <span>And books the hotel room</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.E2EBookingSteps.enters_traveller_details_and_confirms_booking()">
+                <span>And enters traveller details and confirms booking</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.E2EBookingSteps.validate_booking_confirmation_message()">
+                <span>Then validate booking confirmation message</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepdefinitions.E2EBookingSteps.user_logs_out()">
+                <span>And user logs out</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">@Smoke</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Smoke</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@WebTable</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@WebTable</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='12' id='13'>Extract and Validate Booking Data</a>
+<div class="">
+<span class="badge badge-default">Booking Table Validations.Extract and Validate Booking Data</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">@ExcelData</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ExcelData</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Regression</p>
+<p class="duration text-sm">8 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Regression</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='4' id='5'>Validate User Registration with Random Email</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Registration Module.Validate User Registration with Random Email</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='7' id='9'>Validate Hotel Booking Search</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Hotel Search Module.Validate Hotel Booking Search</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='12' id='13'>Extract and Validate Booking Data</a>
+<div class="">
+<span class="badge badge-default">Booking Table Validations.Extract and Validate Booking Data</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:26:13 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Validate Login Functionality using Excel</a>
+<div class="">
+<span class="badge badge-default">PHPTravels Login Module.Validate Login Functionality using Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:26:14 am</td>
+<td>
+<a href="#" class="linked" test-id='26' id='27'>Validate Complete Booking Workflow</a>
+<div class="">
+<span class="badge badge-default">Complete End-to-End Hotel Booking Workflow.Validate Complete Booking Workflow</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@E2E</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@E2E</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>10:26:14 am</td>
+<td>
+<a href="#" class="linked" test-id='26' id='27'>Validate Complete Booking Workflow</a>
+<div class="">
+<span class="badge badge-default">Complete End-to-End Hotel Booking Workflow.Validate Complete Booking Workflow</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>May 29, 2026 10:26:12 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>May 29, 2026 10:27:46 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>4</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='80%'>
+<b>4</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='20%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='87%'><b>7</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='12%'><b>1</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='84%'><b>69</b> steps passed</small></div>
+<div>
+<small data-tooltip='1%'><b>1</b> steps failed,
+<b>12</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"PHPTravels Login Module":81.173,"PHPTravels Registration Module":92.335,"PHPTravels Hotel Search Module":85.186,"Booking Table Validations":81.01,"Complete End-to-End Hotel Booking Workflow":65.313
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@Smoke</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@WebTable</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ExcelData</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Regression</td>
+<td>7</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>87.5%</td>
+</tr>
+<tr>
+<td>@E2E</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 4,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 7,
+failChild: 1,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 69,
+failGrandChild: 1,
+warningGrandChild: 0,
+skipGrandChild: 12,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

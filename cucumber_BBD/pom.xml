@@ -10,6 +10,16 @@
  <version>7.34.3</version>
  <scope>test</scope>
 </dependency>
+<dependency>
+ <groupId>io.rest-assured</groupId>
+ <artifactId>rest-assured</artifactId>
+ <version>5.5.0</version>
+</dependency>
+<dependency>
+ <groupId>io.rest-assured</groupId>
+ <artifactId>json-schema-validator</artifactId>
+ <version>5.5.0</version>
+ </dependency>
 
 <!-- For JUnit 4 Support -->
 <dependency>
@@ -38,6 +48,7 @@
  </dependency>
 <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
+
  <groupId>org.seleniumhq.selenium</groupId>
  <artifactId>selenium-java</artifactId>
  <version>4.44.0</version>
