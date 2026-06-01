@@ -19,7 +19,8 @@ public class HotelSearchPage {
     private By checkInInput = By.name("checkin_date");
     private By checkOutInput = By.name("checkout_date");
     private By travellersDropdown = By.xpath("//*[contains(text(), 'Traveler') or contains(@class, 'traveller')]");
-    private By searchBtn = By.xpath("//button[@type='submit' and contains(., 'Search Hotels')]");
+    
+    private By searchBtn = By.xpath("//button[@title='Search Hotels' or @aria-label='Search Hotels']");
     
     private By nationalityDropdownClickable = By.xpath("//div[@x-data='nationalityDropdown()']//div[contains(@class, 'cursor-pointer')]");
     private By nationalitySearchBox = By.xpath("//div[contains(@class, 'input-dropdown-content')]//input[@type='text']");
@@ -30,7 +31,7 @@ public class HotelSearchPage {
         this.driver = driver;
     }
     
- // Popup Handler Method
+    // Popup Handler Method
     public void closeDemoPopupIfPresent() {
         try {
             WebElement btn = WaitUtils.waitForClickable(driver, understandButton, 3);
@@ -126,6 +127,7 @@ public class HotelSearchPage {
             System.out.println("Travellers dropdown click failed: " + e.getMessage());
         }
     }
+    
     public void selectNationality(String countryName) {
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -146,7 +148,20 @@ public class HotelSearchPage {
     }
 
     public void clickSearch() {
-        WebElement btn = WaitUtils.waitForClickable(driver, searchBtn, 5);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
+        System.out.println("Trying to click Search Button...");
+        try {
+            WebElement btn = WaitUtils.waitForPresence(driver, searchBtn, 10);
+            
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", btn);
+            Thread.sleep(1000); 
+            
+            js.executeScript("arguments[0].click();", btn);
+            System.out.println("Search button clicked successfully using JS!");
+            
+        } catch (Exception e) {
+            System.out.println("Search button click failed: " + e.getMessage());
+            org.testng.Assert.fail("Jenkins execution me search button nahi mila: " + e.getMessage());
+        }
     }
 }
