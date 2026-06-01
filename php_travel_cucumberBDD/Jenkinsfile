@@ -16,25 +16,33 @@ pipeline {
  
         stage('Build') {
             steps {
-                bat 'mvn clean'
+                dir('php_travel_cucumberBDD') {
+                    bat 'mvn clean'
+                }
             }
         }
  
         stage('Compile') {
             steps {
-                bat 'mvn compile'
+                dir('php_travel_cucumberBDD') {
+                    bat 'mvn compile'
+                }
             }
         }
  
         stage('Test') {
             steps {
-                bat 'mvn test'
+                dir('php_travel_cucumberBDD') {
+                    bat 'mvn test'
+                }
             }
         }
  
         stage('Package') {
             steps {
-                bat 'mvn package'
+                dir('php_travel_cucumberBDD') {
+                    bat 'mvn package'
+                }
             }
         }
     }
