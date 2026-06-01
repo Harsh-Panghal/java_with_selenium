@@ -1,0 +1,59 @@
+pipeline {
+    agent any
+ 
+    tools {
+        maven 'Maven_3'
+    }
+ 
+    stages {
+ 
+        stage('Checkout') {
+            steps {
+                git branch: 'master',
+                    url: 'https://github.com/Harsh-Panghal/java_with_selenium'
+            }
+        }
+ 
+        stage('Build') {
+            steps {
+                dir('Practice_TestNg') {
+                    bat 'mvn clean'
+                }
+            }
+        }
+ 
+        stage('Compile') {
+            steps {
+                dir('Practice_TestNg') {
+                    bat 'mvn compile'
+                }
+            }
+        }
+ 
+        stage('Test') {
+            steps {
+                dir('Practice_TestNg') {
+                    bat 'mvn test'
+                }
+            }
+        }
+ 
+        stage('Package') {
+            steps {
+                dir('Practice_TestNg') {
+                    bat 'mvn package'
+                }
+            }
+        }
+    }
+ 
+    post {
+        success {
+            echo 'Build Successful'
+        }
+ 
+        failure {
+            echo 'Build Failed'
+        }
+    }
+}
