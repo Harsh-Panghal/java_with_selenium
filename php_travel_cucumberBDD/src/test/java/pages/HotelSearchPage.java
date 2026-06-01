@@ -61,8 +61,11 @@ public class HotelSearchPage {
     
     public void searchCity(String cityName) {
         try {
+
+            WaitUtils.waitForPresence(driver, destinationInput, 15);
             List<WebElement> destInputs = driver.findElements(destinationInput);
             WebElement activeInput = null;
+            
             for(WebElement input : destInputs) {
                 if(input.isDisplayed()) {
                     activeInput = input;
@@ -81,7 +84,7 @@ public class HotelSearchPage {
                 ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cityOption);
                 System.out.println("City selected from auto-suggest: " + cityName);
             } else {
-                System.out.println(" Koi bhi visible destination input nahi mila!");
+                System.out.println("❌ Koi bhi visible destination input nahi mila!");
                 org.testng.Assert.fail("Destination input visible nahi hai.");
             }
             
@@ -92,7 +95,7 @@ public class HotelSearchPage {
     }
 
     public void selectDates() {
-        System.out.println("⚡ Using Boss-Level JS Injection for Dates...");
+        System.out.println("Using Boss-Level JS Injection for Dates...");
         try {
             WebElement checkIn = WaitUtils.waitForPresence(driver, checkInInput, 5);
             WebElement checkOut = WaitUtils.waitForPresence(driver, checkOutInput, 5);
