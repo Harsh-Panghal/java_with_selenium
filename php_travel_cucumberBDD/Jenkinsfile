@@ -53,6 +53,13 @@ pipeline {
                 }
     		}
 		}
+		stage('Build Docker Image') {
+            steps {
+        		dir('php_travel_cucumberBDD') {
+                    bat 'docker build -t cucumber-project .'
+                }
+    		}
+        }
  
 	    stage('Docker Run') {
     		steps {
