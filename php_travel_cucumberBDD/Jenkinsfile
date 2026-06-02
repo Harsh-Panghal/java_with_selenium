@@ -50,14 +50,15 @@ pipeline {
         		dir('php_travel_cucumberBDD') {
                     bat 'docker build -t cucumber-framework .'
                 }
-    }
-}
+    		}
+		}
  
 	stage('Docker Run') {
     		steps {
         		dir('php_travel_cucumberBDD') {
                     bat 'docker run --rm cucumber-framework'
                 }
+    		}
     	}
     }
  
@@ -73,4 +74,3 @@ pipeline {
             echo 'Build Failed'
         }
     }
-}
