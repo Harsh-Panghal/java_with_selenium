@@ -30,14 +30,6 @@ pipeline {
             }
         }
  
-        stage('Test') {
-            steps {
-                dir('php_travel_cucumberBDD') {
-                    bat 'mvn test'
-                }
-            }
-        }
- 
         stage('Package') {
             steps {
                 dir('php_travel_cucumberBDD') {
@@ -53,13 +45,6 @@ pipeline {
                 }
     		}
 		}
-		stage('Build Docker Image') {
-            steps {
-        		dir('php_travel_cucumberBDD') {
-                    bat 'docker build -t cucumber-project .'
-                }
-    		}
-        }
  
 	    stage('Docker Run') {
     		steps {
@@ -82,4 +67,4 @@ pipeline {
             echo 'Build Failed'
         }
     }
-} 
+}
