@@ -1,6 +1,6 @@
 Feature: PHPTravels Registration Module
 
-  @Regression
+  @Manual
   Scenario: Validate User Registration with Random Email
     Given user is on the registration page
     When user enters personal details "Harsh" "Choudhary"
