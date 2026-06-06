@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-06T10:43:17 IST" name="BlazeDemo Capstone Suite" finished-at="2026-06-06T10:44:19 IST" duration-ms="62462">
+    <groups>
+      <group name="Regression">
+        <method signature="BlazeDemoE2ETest.validateCompleteFlightBookingWorkflow(java.util.Map)[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" name="validateCompleteFlightBookingWorkflow" class="tests.BlazeDemoE2ETest"/>
+      </group> <!-- Regression -->
+      <group name="E2E">
+        <method signature="BlazeDemoE2ETest.validateCompleteFlightBookingWorkflow(java.util.Map)[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" name="validateCompleteFlightBookingWorkflow" class="tests.BlazeDemoE2ETest"/>
+      </group> <!-- E2E -->
+    </groups>
+    <test started-at="2026-06-06T10:43:17 IST" name="End To End Flight Booking Validation" finished-at="2026-06-06T10:44:19 IST" duration-ms="62462">
+      <class name="tests.BlazeDemoE2ETest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" started-at="2026-06-06T10:43:18 IST" name="setUp" finished-at="2026-06-06T10:44:06 IST" duration-ms="47964" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateCompleteFlightBookingWorkflow(java.util.Map)[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" started-at="2026-06-06T10:44:06 IST" name="validateCompleteFlightBookingWorkflow" data-provider="blazeDemoData" finished-at="2026-06-06T10:44:08 IST" duration-ms="2631" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=Harsh Choudhary, Address=123 Tech Park, City=Noida, State=Uttar Pradesh, ZipCode=201301, CardType=Visa, CardNumber=1.11122E+15, Month=11, Year=2026, NameOnCard=Harsh Choudhary, Departure=Paris, Destination=London}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCompleteFlightBookingWorkflow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" started-at="2026-06-06T10:44:08 IST" name="tearDown" finished-at="2026-06-06T10:44:09 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" started-at="2026-06-06T10:44:09 IST" name="setUp" finished-at="2026-06-06T10:44:11 IST" duration-ms="2479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateCompleteFlightBookingWorkflow(java.util.Map)[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" started-at="2026-06-06T10:44:11 IST" name="validateCompleteFlightBookingWorkflow" data-provider="blazeDemoData" finished-at="2026-06-06T10:44:14 IST" duration-ms="2634" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=Aman Singh, Address=456 Developer Lane, City=Mumbai, State=Maharashtra, ZipCode=400001, CardType=American Express, CardNumber=5.55567E+15, Month=12, Year=2027, NameOnCard=Aman Singh, Departure=Boston, Destination=Berlin}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCompleteFlightBookingWorkflow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" started-at="2026-06-06T10:44:14 IST" name="tearDown" finished-at="2026-06-06T10:44:14 IST" duration-ms="173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" started-at="2026-06-06T10:44:14 IST" name="setUp" finished-at="2026-06-06T10:44:16 IST" duration-ms="2465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateCompleteFlightBookingWorkflow(java.util.Map)[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" started-at="2026-06-06T10:44:16 IST" name="validateCompleteFlightBookingWorkflow" data-provider="blazeDemoData" finished-at="2026-06-06T10:44:19 IST" duration-ms="2668" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=Priya Sharma, Address=789 IT Hub, City=Bangalore, State=Karnataka, ZipCode=560001, CardType=Diner's Club, CardNumber=9.999E+15, Month=5, Year=2028, NameOnCard=Priya Sharma, Departure=Portland, Destination=Rome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCompleteFlightBookingWorkflow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BlazeDemoE2ETest@4562e04d]" started-at="2026-06-06T10:44:19 IST" name="tearDown" finished-at="2026-06-06T10:44:19 IST" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.BlazeDemoE2ETest -->
+    </test> <!-- End To End Flight Booking Validation -->
+  </suite> <!-- BlazeDemo Capstone Suite -->
+</testng-results>
