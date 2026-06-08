@@ -3,30 +3,29 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import java.time.Duration;
+import utils.WaitUtils; 
+import java.util.List;
 
 public class FlightResultsPage {
     private WebDriver driver;
-    private WebDriverWait wait;
 
+    // Locators
     private By flightsTable = By.cssSelector("table.table");
     private By allRows = By.xpath("//table[@class='table']/tbody/tr");
 
     public FlightResultsPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
     public java.util.Map<String, String> selectCheapestFlight() {
         java.util.Map<String, String> selectedFlightData = new java.util.HashMap<>();
         try {
             System.out.println("[STEP] Analyzing all available flights to find the cheapest option...");
-            wait.until(ExpectedConditions.visibilityOfElementLocated(flightsTable));
             
-            java.util.List<WebElement> rows = driver.findElements(allRows);
+            WaitUtils.waitForElementVisible(flightsTable);
+            
+            List<WebElement> rows = driver.findElements(allRows);
             double minPrice = Double.MAX_VALUE;
             WebElement cheapestRow = null;
             WebElement cheapestFlightBtn = null;
@@ -49,6 +48,7 @@ public class FlightResultsPage {
 
                 System.out.println("[LOGIC] Cheapest flight found! Airline: " + selectedFlightData.get("Airline") 
                                     + " | Price: $" + minPrice);
+                
                 cheapestFlightBtn.click();
             } else {
                 Assert.fail("Could not find any flight buttons in the table!");
@@ -57,6 +57,6 @@ public class FlightResultsPage {
         } catch (Exception e) {
             Assert.fail("Failed to process flights table: " + e.getMessage());
         }
-        return selectedFlightData; // Data aage (Purchase Page) pass karne ke liye return kiya
+        return selectedFlightData; 
     }
 }

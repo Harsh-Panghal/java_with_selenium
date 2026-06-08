@@ -2,18 +2,16 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import java.time.Duration;
-import java.util.Map;
 import org.testng.asserts.SoftAssert;
+import utils.WaitUtils; // 💡 WaitUtils imported
+import java.util.Map;
 
 public class PurchasePage {
     private WebDriver driver;
-    private WebDriverWait wait;
 
+    // Locators
     private By totalCostText = By.xpath("//p[contains(text(), 'Total Cost')]");
     private By inputName = By.id("inputName");
     private By inputAddress = By.id("address");
@@ -29,7 +27,6 @@ public class PurchasePage {
 
     public PurchasePage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
     public void fillDetailsAndPurchase(Map<String, String> excelData, Map<String, String> flightData) {
@@ -37,48 +34,40 @@ public class PurchasePage {
 
         try {
             System.out.println("[STEP] Validating Context Data and Entering Passenger Details...");
-            wait.until(ExpectedConditions.visibilityOfElementLocated(totalCostText));
+            WaitUtils.waitForElementVisible(totalCostText);
 
-            // 1. Cross-Page State Validations (Soft Assertions)
-            String actualFlightNum = driver.findElement(By.xpath("//p[contains(text(), 'Flight Number')]")).getText();
-            String actualAirline = driver.findElement(By.xpath("//p[contains(text(), 'Airline')]")).getText();
-            String actualPrice = driver.findElement(By.xpath("//p[contains(text(), 'Price')]")).getText();
+            // 1. Cross-Page State Validations (Soft Assertions) using WaitUtils
+            String actualFlightNum = WaitUtils.waitForElementVisible(By.xpath("//p[contains(text(), 'Flight Number')]")).getText();
+            String actualAirline = WaitUtils.waitForElementVisible(By.xpath("//p[contains(text(), 'Airline')]")).getText();
+            String actualPrice = WaitUtils.waitForElementVisible(By.xpath("//p[contains(text(), 'Price')]")).getText();
             
-            //BlazeDemo has a known defect (hardcoded checkout details).
+            // BlazeDemo has a known defect (hardcoded checkout details).
             System.out.println("[DEFECT LOG] Application is showing hardcoded dummy data!");
             System.out.println("   -> Expected Airline: " + flightData.get("Airline") + " | Actual Shows: " + actualAirline);
             System.out.println("   -> Expected Price: $" + flightData.get("Price") + " | Actual Shows: " + actualPrice);
 
-            // check previous page data matched with current page or not
-			/*
-			 * softAssert.assertTrue(actualFlightNum.contains(flightData.get("FlightNumber")
-			 * ), "Flight Number Mismatch!");
-			 * softAssert.assertTrue(actualAirline.contains(flightData.get("Airline")),
-			 * "Airline Mismatch!");
-			 * softAssert.assertTrue(actualPrice.contains(flightData.get("Price")),
-			 * "Price Mismatch!");
-			 */
             softAssert.assertTrue(actualAirline.contains("United"), "Purchase page dummy data missing!");
 
             // 2. Fill the Form
-            driver.findElement(inputName).sendKeys(excelData.get("Name"));
-            driver.findElement(inputAddress).sendKeys(excelData.get("Address"));
-            driver.findElement(inputCity).sendKeys(excelData.get("City"));
-            driver.findElement(inputState).sendKeys(excelData.get("State"));
-            driver.findElement(inputZipCode).sendKeys(excelData.get("ZipCode"));
+            WaitUtils.waitForElementVisible(inputName).sendKeys(excelData.get("Name"));
+            WaitUtils.waitForElementVisible(inputAddress).sendKeys(excelData.get("Address"));
+            WaitUtils.waitForElementVisible(inputCity).sendKeys(excelData.get("City"));
+            WaitUtils.waitForElementVisible(inputState).sendKeys(excelData.get("State"));
+            WaitUtils.waitForElementVisible(inputZipCode).sendKeys(excelData.get("ZipCode"));
             
-            new Select(driver.findElement(cardTypeDropdown)).selectByVisibleText(excelData.get("CardType"));
-            driver.findElement(creditCardNumber).sendKeys(excelData.get("CardNumber"));
+            new Select(WaitUtils.waitForElementVisible(cardTypeDropdown)).selectByVisibleText(excelData.get("CardType"));
+            WaitUtils.waitForElementVisible(creditCardNumber).sendKeys(excelData.get("CardNumber"));
             
-            driver.findElement(creditCardMonth).clear();
-            driver.findElement(creditCardMonth).sendKeys(excelData.get("Month"));
+            WaitUtils.waitForElementVisible(creditCardMonth).clear();
+            WaitUtils.waitForElementVisible(creditCardMonth).sendKeys(excelData.get("Month"));
             
-            driver.findElement(creditCardYear).clear();
-            driver.findElement(creditCardYear).sendKeys(excelData.get("Year"));
+            WaitUtils.waitForElementVisible(creditCardYear).clear();
+            WaitUtils.waitForElementVisible(creditCardYear).sendKeys(excelData.get("Year"));
             
-            driver.findElement(nameOnCard).sendKeys(excelData.get("NameOnCard"));
+            WaitUtils.waitForElementVisible(nameOnCard).sendKeys(excelData.get("NameOnCard"));
             
-            wait.until(ExpectedConditions.elementToBeClickable(purchaseBtn)).click();
+            // Wait for button to be clickable before clicking
+            WaitUtils.waitForElementClickable(purchaseBtn).click();
             System.out.println("[STEP] Details submitted. Purchasing flight...");
 
             softAssert.assertAll(); 
