@@ -4,14 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import java.time.Duration;
 
 public class DriverFactory {
 
     public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
     public WebDriver init_driver(String browser) {
-        System.out.println("Starting Test Execution on Browser: " + browser);
+        System.out.println("Starting Test Execution on Local Browser: " + browser);
 
         if (browser.equalsIgnoreCase("chrome")) {
             tlDriver.set(new ChromeDriver());
@@ -25,7 +24,6 @@ public class DriverFactory {
 
         getDriver().manage().deleteAllCookies();
         getDriver().manage().window().maximize();
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         
         return getDriver();
     }

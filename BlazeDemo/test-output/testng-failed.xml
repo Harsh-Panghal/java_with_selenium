@@ -5,15 +5,15 @@
     <listener class-name="listeners.TestListener"/>
   </listeners>
   <test thread-count="5" name="End To End Flight Booking Validation(failed)" verbose="2">
-    <groups>
-      <run>
-        <include name="E2E"/>
-      </run>
-    </groups>
     <classes>
       <class name="tests.BlazeDemoE2ETest">
         <methods>
-          <include name="validateCompleteFlightBookingWorkflow" invocation-numbers="0 1 2"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testPurchaseFlight" invocation-numbers="0 2"/>
+          <include name="testSelectCheapestFlight"/>
+          <include name="testVerifyBookingConfirmation"/>
+          <include name="testFlightSearch"/>
         </methods>
       </class> <!-- tests.BlazeDemoE2ETest -->
     </classes>

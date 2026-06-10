@@ -2,6 +2,7 @@ package tests;
 
 import base.BaseTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 import pages.ConfirmationPage;
 import pages.FlightResultsPage;
@@ -13,9 +14,16 @@ import java.util.List;
 import java.util.Map;
 
 public class BlazeDemoE2ETest extends BaseTest {
+    private Map<String, String> testData;
+    private Map<String, String> extractedFlightDetails;
+
+    private HomePage homePage;
+    private FlightResultsPage resultsPage;
+    private PurchasePage purchasePage;
+    private ConfirmationPage confirmationPage;
 
     @DataProvider(name = "blazeDemoData")
-    public Object[][] getPassengerData() {
+    public static Object[][] getPassengerData() {
         ExcelReader excelReader = new ExcelReader();
         List<Map<String, String>> dataList = excelReader.getData("./src/test/resources/testdata/BlazeDemoData.xlsx", "PassengerData");
         
@@ -26,24 +34,36 @@ public class BlazeDemoE2ETest extends BaseTest {
         return data;
     }
 
-    @Test(dataProvider = "blazeDemoData", groups = {"Regression", "E2E"}, retryAnalyzer = listeners.RetryAnalyzer.class)
-    public void validateCompleteFlightBookingWorkflow(Map<String, String> dataMap) {
-        
-        HomePage homePage = new HomePage(driver);
-        FlightResultsPage resultsPage = new FlightResultsPage(driver);
-        PurchasePage purchasePage = new PurchasePage(driver);
-        ConfirmationPage confirmationPage = new ConfirmationPage(driver);
+    @Factory(dataProvider = "blazeDemoData")
+    public BlazeDemoE2ETest(Map<String, String> testData) {
+        this.testData = testData;
+    }
 
-        String depCity = dataMap.get("Departure");
-        String destCity = dataMap.get("Destination");
+
+    @Test(priority = 1, groups = {"Smoke", "Search"})
+    public void testFlightSearch() {
+        System.out.println("Executing for Passenger: " + testData.get("Name"));
+        homePage = new HomePage(driver);
+        String depCity = testData.get("Departure");
+        String destCity = testData.get("Destination");
         homePage.searchFlight(depCity, destCity);
+    }
 
-        // fatch the flightDetails to verify cross page state
-        Map<String, String> extractedFlightDetails = resultsPage.selectCheapestFlight();
+    @Test(priority = 2, dependsOnMethods = "testFlightSearch", groups = {"Smoke", "Selection"})
+    public void testSelectCheapestFlight() {
+        resultsPage = new FlightResultsPage(driver);
+        extractedFlightDetails = resultsPage.selectCheapestFlight();
+    }
 
-        // Excel ka data + previous page data -> Passing the data mean CONTEXT TRANSFER
-        purchasePage.fillDetailsAndPurchase(dataMap, extractedFlightDetails);
+    @Test(priority = 3, dependsOnMethods = "testSelectCheapestFlight", groups = {"Regression", "Purchase"})
+    public void testPurchaseFlight() {
+        purchasePage = new PurchasePage(driver);
+        purchasePage.fillDetailsAndPurchase(testData, extractedFlightDetails);
+    }
 
+    @Test(priority = 4, dependsOnMethods = "testPurchaseFlight", groups = {"Regression", "E2E"}, retryAnalyzer = listeners.RetryAnalyzer.class)
+    public void testVerifyBookingConfirmation() {
+        confirmationPage = new ConfirmationPage(driver);
         confirmationPage.verifySuccess();
     }
 }

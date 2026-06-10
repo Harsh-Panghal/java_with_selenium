@@ -7,15 +7,7 @@
         <listener class-name="listeners.TestListener" />
     </listeners>
 
-    <test name="End To End Flight Booking Validation">
-        
-        <groups>
-            <run>
-                <include name="E2E" />
-                
-                </run>
-        </groups>
-
+    <test name="End To End Flight Booking Validation" group-by-instances="true">
         <classes>
             <class name="tests.BlazeDemoE2ETest" />
         </classes>
